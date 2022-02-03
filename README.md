@@ -1,5 +1,5 @@
 # Spring Chain
-We built a custom select component with a menu with animations and beautiful gradients, is called "Color Picker" because you can select any gradient from the list and the menu is displayed as a grid.
+We built a custom select component with a menu with animations and beautiful gradients, is called "Spring Chain" because of how the animation is built, you can select any gradient from the list and the menu is displayed as a grid.
 
 We also made use of the "spring chain" (react-spring library) to make some perfect animations.
 
