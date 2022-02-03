@@ -22,6 +22,12 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
@@ -52,11 +58,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -5px;
+}
+
+@media only screen and (max-width: 500px) {
+  .label {
+    font-size: 2rem;
+  }
+
+  i {
+    font-size: 2rem;
+    margin-left: 10px !important;
+  }
 }
 
 i {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-left: 20px;
 }
 
@@ -64,7 +80,8 @@ i {
   position: relative;
   z-index: 10;
   display: grid;
-  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-template-rows: auto;
   grid-gap: 25px;
   padding: 25px;
   border-radius: 10px;
@@ -73,7 +90,8 @@ i {
   box-shadow:  0 2rem 5rem rgba(0,0,0,.2);
   will-change: width, height;
   background: inherit;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .container:before {
@@ -94,8 +112,10 @@ i {
   background: transparent;
   display: grid;
   grid-column: 1 / 5;
-  grid-row: 1 / 5;
+  background-color: transparent;
+  margin: -25px;
   padding: 20px 40px;
+  padding-bottom: -40px !important;
   border-radius: 10px;
   justify-items: flex-start;
   align-items: center;
@@ -106,6 +126,9 @@ i {
 .item {
   position: relative;
   z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-self: center;
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, .7);
@@ -113,6 +136,20 @@ i {
   box-shadow:  0 2rem 5rem rgba(0,0,0,.15);
   will-change: transform, opacity;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+  .item {
+    height: 15rem;
+    padding-right: 25px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .item {
+    height: 15rem;
+    margin: 0 auto !important;
+  }
 }
 
 .item::before {
@@ -129,4 +166,26 @@ i {
 
 .none {
   display: none;
+}
+
+/* ------------------------- Scrollbar --------------------------- */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, .5);
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  border-radius: 3rem;
+  filter: blur(10px);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, .9);
+  border-radius: 3rem;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  filter: blur(10px);
 }
