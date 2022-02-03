@@ -5,6 +5,12 @@ We also made use of the "spring chain" (react-spring library) to make some perfe
 
 ![app gif](./app-screen.gif)
 
+## Live Demo
+[Live](https://animated-select.netlify.app/)
+
+## Video Tutorial
+[Video Tutorial](https://www.youtube.com/watch?v=M7mRGFMxXZ4&t=6s)
+
 ## Built with
 - JavaScript
 - react
